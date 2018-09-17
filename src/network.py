@@ -50,7 +50,11 @@ class Network(object):
         self-explanatory.  If ``test_data`` is provided then the
         network will be evaluated against the test data after each
         epoch, and partial progress printed out.  This is useful for
-        tracking progress, but slows things down substantially."""
+        tracking progress, but slows things down substantially.
+
+        The variables epochs and mini_batch_size are what you'd expect
+        - the number of epochs to train for, and the size of the
+        mini-batches to use when sampling. eta is the learning rate, ηη"""
         if test_data: n_test = len(test_data)
         n = len(training_data)
         for j in xrange(epochs):
